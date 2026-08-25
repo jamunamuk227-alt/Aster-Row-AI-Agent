@@ -1,6 +1,8 @@
 import sys
 from pathlib import Path
 
+import os
+
 from flask import Flask, render_template, request, jsonify
 
 
@@ -96,7 +98,7 @@ def reset():
 
 if __name__ == "__main__":
 
-    import os
+  
 
     web_app.run(
         host=os.getenv("HOST", "127.0.0.1"),
