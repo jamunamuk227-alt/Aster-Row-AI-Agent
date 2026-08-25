@@ -96,8 +96,18 @@ def reset():
 
 if __name__ == "__main__":
 
+    import os
+
     web_app.run(
-        host="127.0.0.1",
-        port=5000,
+        host=os.getenv("HOST", "127.0.0.1"),
+        port=int(os.getenv("PORT", "5000")),
         debug=True
     )
+        
+# if __name__ == "__main__":
+
+#     web_app.run(
+#         host="127.0.0.1",
+#         port=5000,
+#         debug=True
+#     )
